@@ -7,7 +7,7 @@ import { Navigation } from "@/components/navigation"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "Aymen - Full Stack Developer",
+  title: "Aymen - Resume",
   description: "Personal portfolio website showcasing projects, skills, and achievements",
 }
 

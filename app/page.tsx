@@ -2,7 +2,7 @@ import type React from "react"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
-import { Github, Linkedin, Mail, ArrowRight, Cloud, BarChart, Settings,Database, ArrowDown, Download } from "lucide-react"
+import { Github, Linkedin, Mail, ArrowRight, Cloud, BarChart, Settings,Database, ArrowDown, Download, PieChart, LineChart } from "lucide-react"
 
 function hexToRgba(hex: string, alpha: number) {
   const cleanHex = hex.replace("#", "").slice(0, 6); // drop alpha if present
@@ -24,7 +24,12 @@ const technicalSkills = [
   { name: "SQL", color: "#E9762B" },
   { name: "Tailwind CSS", color: "#0D4715" },
   { name: "Spark", color: "#bc852dff" },
-  { name: "DataBricks", color: "#e92b2bff" },
+  { name: "Sklearn", color: "#e9872bff" },
+  { name: "Pandas", color: "#150458ff" },
+  { name: "NumPy", color: "#013243ff" },
+  { name: "Seaborn", color: "#e76f51ff" },
+  { name: "Anaconda", color: "#e76f51ff" },
+  { name:"Polars", color: "#e76f51ff" }
 ]
 
 const SkillBadge = ({ skill }: { skill: (typeof technicalSkills)[0] }) => (
@@ -46,32 +51,32 @@ const SkillBadge = ({ skill }: { skill: (typeof technicalSkills)[0] }) => (
 export default function HomePage() {
 const services = [
   {
+    icon: LineChart,
+    title: "Predictive Modeling & Machine Learning",
+    description: "Building and deploying models to forecast outcomes and extract insights from data.",
+    color: "from-blue-600 to-blue-700",
+    delay: "0.1s",
+  },
+  {
+    icon: PieChart,
+    title: "Data Analysis & Visualization",
+    description: "Extracting insights from complex datasets and presenting them through clear, interactive visualizations.",
+    color: "from-orange-500 to-orange-600",
+    delay: "0.2s",
+  },
+  {
     icon: Database,
     title: "Data Pipeline Development",
     description: "Designing and implementing scalable ETL/ELT pipelines for structured and unstructured data.",
     color: "from-blue-500 to-blue-600",
-    delay: "0s",
-  },
-  {
-    icon: Settings,
-    title: "Data Infrastructure",
-    description: "Building and maintaining reliable data warehouses and lakes using tools like Spark.",
-    color: "from-indigo-600 to-indigo-700",
-    delay: "0.2s",
+    delay: "0.3s",
   },
   {
     icon: Cloud,
-    title: "Cloud Data Engineering",
+    title: "Cloud",
     description: "Orchestrating data workflows on cloud platforms",
     color: "from-purple-700 to-purple-800",
     delay: "0.4s",
-  },
-  {
-    icon: BarChart,
-    title: "Data Quality & Governance",
-    description: "Ensuring clean, consistent, and secure data through validation, monitoring, and compliance practices.",
-    color: "from-teal-600 to-teal-700",
-    delay: "0.6s",
   },
 ]
   
@@ -99,9 +104,6 @@ const services = [
                       Aymen
                     </span>
                   </h1>
-                  <p className="text-xl mb-4" style={{ color: "#41644A" }}>
-                    Data Engineer
-                  </p>
                   <p className="text-lg max-w-lg leading-relaxed" style={{ color: "#0D4715" }}>
                     Passionate about building scalable systems that transform raw information into actionable insights, 
                     driving smarter decisions and impactful solutions.
