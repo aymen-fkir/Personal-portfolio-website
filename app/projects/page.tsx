@@ -6,11 +6,11 @@ export default function ProjectsPage() {
     {
       title: "AI-Powered E-commerce Analytics Dashboard",
       githubUrl: "https://github.com/aymen-fkir/AI-Powered-E-commerce-Analytics/tree/main",
-      description: `This project is a data engineering solution that creates an entire e-commerce analytics system. It starts by generating and enhancing synthetic data, then uses a robust ETL pipeline to process and analyze it. Finally, a dynamic dashboard visualizes key business insights from the processed data.`,
+      description: `This project is a data engineering solution that creates an entire e-commerce analytics system. It starts by generating and enhancing synthetic data, then uses a robust ETL pipeline to process and analyze it.`,
       technologies: ["Python", "Polars", "PostgreSQL", "Supabase", "Next.js", "Ollama", "llama cpp", "Mockaroo", "Ngrok", "Vercel"],
       featured: true,
-      status: "IN PROGRESS",
-      statusClass: "status-progress",
+      status: "COMPLETED",
+      statusClass: "status-completed",
     },
     {
       title: "SensorFusion-Twin",
