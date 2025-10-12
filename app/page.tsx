@@ -2,7 +2,7 @@ import type React from "react"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
-import { Github, Linkedin, Mail, ArrowRight, Cloud, BarChart, Settings,Database, ArrowDown, Download, PieChart, LineChart } from "lucide-react"
+import { Github,Newspaper,Linkedin, Mail, ArrowRight, Cloud, BarChart, Settings,Database, ArrowDown, Download, PieChart, LineChart } from "lucide-react"
 
 function hexToRgba(hex: string, alpha: number) {
   const cleanHex = hex.replace("#", "").slice(0, 6); // drop alpha if present
@@ -146,6 +146,18 @@ const services = [
                     }}
                   >
                     <a href="mailto:aymenfkir23@gmail.com"><Mail className="h-5 w-5" /></a>
+                  </Button>
+                                    <Button
+                    variant="outline"
+                    size="icon"
+                    className="border-2 hover:bg-opacity-20 bg-transparent"
+                    style={{
+                      borderColor: "#41644A",
+                      color: "#41644A",
+                      backgroundColor: "transparent",
+                    }}
+                  >
+                    <a href="https://medium.com/@aymenfkir23"><Newspaper className="h-5 w-5" /></a>
                   </Button>
                 </div>
 
