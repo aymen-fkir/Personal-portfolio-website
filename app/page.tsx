@@ -31,7 +31,7 @@ const technicalSkills = [
   { name: "Anaconda", color: "#e76f51ff" },
   { name:"Polars", color: "#e76f51ff" },
   { name:"RAG", color: "#e7d851ff" },
-  { name:"Qdrant", color: "#51e7ceff"}
+  { name:"Qdrant", color: "#0a7a68ff"}
 
 ]
 
@@ -266,18 +266,19 @@ const services = [
                   }}
                 >
                   <CardContent className="p-6">
-                    <div className="overflow-hidden">
-                      <div className="flex animate-scroll whitespace-nowrap">
-                        <div className="flex space-x-8 animate-scroll-content">
+                    <div className="overflow-hidden relative">
+                      <div className="flex w-max animate-scroll">
+                        <div className="flex space-x-8 px-4">
                           {technicalSkills.map((skill, index) => (
                             <SkillBadge key={`scroll-1-${index}`} skill={skill} />
                           ))}
                         </div>
-                        <div className="flex space-x-8 animate-scroll-content ml-8">
+                        <div className="flex space-x-8 px-4">
                           {technicalSkills.map((skill, index) => (
                             <SkillBadge key={`scroll-2-${index}`} skill={skill} />
                           ))}
                         </div>
+                        
                       </div>
                     </div>
                   </CardContent>
