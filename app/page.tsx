@@ -29,7 +29,10 @@ const technicalSkills = [
   { name: "NumPy", color: "#013243ff" },
   { name: "Seaborn", color: "#e76f51ff" },
   { name: "Anaconda", color: "#e76f51ff" },
-  { name:"Polars", color: "#e76f51ff" }
+  { name:"Polars", color: "#e76f51ff" },
+  { name:"RAG", color: "#e7d851ff" },
+  { name:"Qdrant", color: "#51e7ceff"}
+
 ]
 
 const SkillBadge = ({ skill }: { skill: (typeof technicalSkills)[0] }) => (

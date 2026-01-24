@@ -1,6 +1,7 @@
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Quote } from "lucide-react"
+import { Description } from "@radix-ui/react-dialog"
 
 export default function AchievementsPage() {
   const journeySteps = [
@@ -42,6 +43,27 @@ export default function AchievementsPage() {
       type: "achievement",
       icon: "🎓",
     },
+    {
+      year: "2025",
+      title : "Volunteering",
+      description: "joined Omdena as a volunteer ML engineer",
+      type: "volunteering",
+      icon: "🤝",
+    },
+    {
+      year: "2025",
+      title: "Study",
+      description: "Joined Esprit University for a Engineering degree ",
+      type: "education",
+      icon: "🎓",
+    },
+    {
+      year: "2025",
+      title: "Part-time Job",
+      description:"Joined Evimo as a part-time Ml Engineer",
+      type: "work",
+      icon: "💼",
+    }
   ]
 
   const achievements = [
@@ -86,12 +108,26 @@ export default function AchievementsPage() {
   const recognitions = [
     {
       quote:
+        `I worked with Aymen Fkir during Omdena’s ULog project (“Building ULog: a deterministic Log Normalization & Classification pipeline”), where he made strong, hands-on contributions on the data engineering side.
+        Aymen’s biggest impact was building a solid synthetic log generation framework in Python that the team could rely on for reproducible testing and validation. He designed an extensible generator architecture with seeded determinism, implemented realistic log/message generation patterns across multiple domains, and provided practical tooling (CLI + utilities) to generate structured datasets consistently. He also added determinism-focused unit tests, contributed to baseline dataset generation/validation workflows, and helped integrate these capabilities into the project’s build and CI pipeline, addressing linting and workflow issues along the way. His attention to detail around data quality—schema alignment, coherent error messages, and stable identifiers—helped raise the overall reliability of the system.
+        In collaboration, Aymen communicated clearly, responded well to feedback, and was dependable in delivering the tasks he committed to. He was also balancing multiple responsibilities in parallel, and I think he’ll be even more impactful in environments where he can dedicate deeper focus and take broader ownership over time.
+        Overall, I’d recommend Aymen for teams looking for a strong engineer who can design and implement reliable data tooling, build reproducible generation and validation workflows, and ship high-quality Python code.`,
+      author:"José Manuel Díaz Urraco",
+      position: "Product Owner (PO) & Lead Maintainer ",
+      company: "Omdena",
+      avatar: "/jose.png",
+    
+      
+    },
+    {
+      quote:
         "I had the pleasure of working with Aymen during his internship at DeepVolt, and he proved to be an exceptional addition to our team. Technically gifted and consistently up-to-date with the latest industry trends, Aymen brought fresh insights and innovative ideas to every project he worked on. Beyond his technical prowess, he demonstrated a collaborative spirit and a positive attitude that made him a true team player. His dedication, eagerness to learn, and ability to adapt quickly were invaluable to our team. I highly recommend Aymen for any opportunity where his skills and work ethic can shine.",
       author: "Ala Chalghaf",
       position: "Lead Data Scientist",
       company: "Deepvolt",
       avatar: "/ala.jpeg",
-    },
+    }
+    
     
   ]
 
@@ -219,7 +255,7 @@ export default function AchievementsPage() {
 
                       {/* Quote Text */}
                       <p className="text-sm leading-relaxed mb-6 italic" style={{ color: "#0D4715" }}>
-                        "{recognition.quote}"
+                        {recognition.quote}
                       </p>
 
                       {/* Author Info */}
